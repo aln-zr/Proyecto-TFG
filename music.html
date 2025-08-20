@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECHOES | Official Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Iceland&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">ECHOES</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_us.html">About us</a></li>
+                <li><a href="tour.html">Tour</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let header = document.querySelector("header");
+    
+            // Ensure header starts hidden
+            header.style.opacity = "0";
+            header.style.top = "-200px"; // Move it off-screen
+    
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 100) { // Show header after scrolling 50px
+                    header.style.opacity = "1";
+                    header.style.top = "0";
+                } else {
+                    header.style.opacity = "0";
+                    header.style.top = "-200px"; // Keep it off-screen when at top
+                }
+            });
+        });
+    </script>
+
+
+    <section id="music">
+        <h2>Our new album </h2>
+        <h3 class="music-h3">Disrupted</h3>
+    </section>
+
+
+    <section id="album">        
+        <div>
+            <img src="imagenes para proyectos/102.jpg">
+            <img src="imagenes para proyectos/103.jpg">
+         </div>
+        
+    </section>
+
+</body>
+</html>
